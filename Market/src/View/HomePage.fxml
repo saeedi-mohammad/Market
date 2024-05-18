@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="935.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomePageController">
+   <top>
+      <GridPane prefHeight="76.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="33.599996948242186" minHeight="10.0" prefHeight="30.19999961853027" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="48.60000495910644" minHeight="10.0" prefHeight="45.400000381469724" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <MenuBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="27.0" prefWidth="1000.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="فایل">
+                  <items>
+                    <MenuItem fx:id="ExitAll" mnemonicParsing="false" onAction="#ExitFromSoftware" text="خروج از نرم افزار" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="درباره نرم افزار">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="درباره سازنده" />
+                        <MenuItem mnemonicParsing="false" text="راه های ارتباطی" />
+                        <MenuItem mnemonicParsing="false" text="قوانین" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <GridPane prefHeight="42.0" prefWidth="1000.0" style="-fx-background-color: #EBF5FB; -fx-border-color: #D7DBDD;" GridPane.rowIndex="1">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="210.0" minWidth="210.0" prefWidth="210.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" />
+                <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="170.0" prefWidth="170.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="سیستم فروشگاه" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman Bold Italic" size="29.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets right="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <MenuButton fx:id="namefamily" alignment="CENTER" maxWidth="189.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="39.0" prefWidth="189.0" style="-fx-background-color: #EAFAF1; -fx-border-color: #E2E2E2;" text="نام و نام خانوادگی" GridPane.columnIndex="1">
+                    <items>
+                        <MenuItem fx:id="InOutButton" mnemonicParsing="false" onAction="#SetInOut" text="             ثبت ورود/خروج" />
+                      <MenuItem fx:id="OperatorEditInfoButton" mnemonicParsing="false" onAction="#EditInformation" text="       ویرایش اطلاعات کاربری        " />
+                      <MenuItem fx:id="OperatorExitButton" mnemonicParsing="false" onAction="#Exit" text="                     خروج" />
+                    </items>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                  </MenuButton>
+                  <Label fx:id="accesslevel" text="سمت" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman" size="16.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ImageView fx:id="inOrOutImage" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </top>
+   <right>
+      <GridPane prefHeight="622.0" prefWidth="145.0" style="-fx-border-color: #D7DBDD;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="140.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="592.2000030517578" minHeight="10.0" prefHeight="390.4000183105469" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="35.0" minHeight="35.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="NewSaleButton" mnemonicParsing="false" onAction="#CreateNewSale" prefHeight="32.0" prefWidth="140.0" text="ثبت فروش جدید">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Button fx:id="NewItemButton" mnemonicParsing="false" onAction="#CreateNewItem" prefHeight="32.0" prefWidth="140.0" text="ثبت کالای جدید" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="NewPurchaseButton" mnemonicParsing="false" onAction="#CreateNewPurchase" prefHeight="32.0" prefWidth="140.0" text="ثبت خرید جدید" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="ItemManageButton" mnemonicParsing="false" onAction="#GoItemManageForm" prefHeight="32.0" prefWidth="140.0" text="مدیریت کالا ها" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="OperatorManageButton" mnemonicParsing="false" onAction="#GoOperatorManageForm" prefHeight="32.0" prefWidth="140.0" text="مدیریت کارکنان" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="CustomerManageButton" mnemonicParsing="false" onAction="#GoCustomerManageForm" prefHeight="32.0" prefWidth="140.0" text="مدیریت مشتریان" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="GroupsManageButton" mnemonicParsing="false" onAction="#GoGroupsManage" prefHeight="32.0" prefWidth="140.0" text="دسته بندی کالا ها" GridPane.rowIndex="6">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="TransactionButton" mnemonicParsing="false" onAction="#GoTransactions" prefHeight="32.0" prefWidth="140.0" text="تراکنش ها" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></Button>
+            <Button fx:id="OperatorExitButton2" mnemonicParsing="false" onAction="#Exit" prefHeight="32.0" prefWidth="140.0" text="خروج از حساب" GridPane.rowIndex="12">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="notesButton" mnemonicParsing="false" onAction="#GoNotes" prefHeight="32.0" prefWidth="140.0" text="یادداشت ها" GridPane.rowIndex="11">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="ReportsButton" mnemonicParsing="false" onAction="#GoReports" prefHeight="32.0" prefWidth="140.0" text="گزارشات" GridPane.rowIndex="8">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="2.0" right="2.0" top="2.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets left="2.0" top="1.0" />
+         </padding>
+      </GridPane>
+   </right>
+   <center>
+      <ImageView fx:id="homeImage" fitHeight="619.0" fitWidth="780.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <viewport>
+            <Rectangle2D />
+         </viewport></ImageView>
+   </center>
+</BorderPane>

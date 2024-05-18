@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="438.0" prefWidth="697.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.EditItemController">
+   <top>
+      <GridPane alignment="CENTER" prefHeight="64.0" prefWidth="698.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER_RIGHT" text="مشخصات کالا :" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="(در صورت تغییر موجودی کالا ، این تغییر در بخش فاکتور های خرید یا فروش ثبت نخواهد شد)" textFill="#b13636" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="10.0" right="20.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </GridPane>
+   </top>
+   <center>
+      <GridPane prefHeight="344.0" prefWidth="508.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-background-radius: 5px; -fx-border-radius: 5px;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.79998779296875" minWidth="10.0" prefWidth="205.79998779296875" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.199951171875" minWidth="10.0" prefWidth="119.59998779296873" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="264.0000610351562" minWidth="10.0" prefWidth="204.4000122070313" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.2000122070312" minWidth="10.0" prefWidth="104.39998779296877" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="نام کالا :" GridPane.columnIndex="3" />
+            <Label text="قیمت فروش :" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="کد کالا :" GridPane.columnIndex="1" />
+            <Label text="قیمت خرید :" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label text="نام گروه :" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label text="کد گروه :" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="قیمت فروش عمده :" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="سریال کالا :" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label text="تعداد :" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label text="وزن :" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="namefield" nodeOrientation="RIGHT_TO_LEFT" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="idfield" editable="false">
+               <GridPane.margin>
+                  <Insets left="20.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="PurchasePricefield" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="RetailPricefield" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="groupidfield" editable="false" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="groupnamefield" editable="false" nodeOrientation="RIGHT_TO_LEFT" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="WholesalePricefield" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="serialfield" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="weightfield" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="numberfield" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="idfield" editable="false" layoutX="31.0" layoutY="144.0">
+               <GridPane.margin>
+                  <Insets left="20.0" right="5.0" />
+               </GridPane.margin></TextField>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <GridPane prefHeight="80.0" prefWidth="698.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="BackButton" mnemonicParsing="false" onAction="#Back" prefWidth="120.0" text="برگشت" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="SaveButton" mnemonicParsing="false" onAction="#SaveChanges" prefWidth="120.0" text="ذخیره" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </bottom>
+   <left>
+      <Pane prefHeight="344.0" prefWidth="28.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="344.0" prefWidth="30.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

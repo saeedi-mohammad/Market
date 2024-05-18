@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.NewSaleController">
+   <center>
+      <BorderPane prefHeight="401.0" prefWidth="995.0" BorderPane.alignment="CENTER">
+         <center>
+            <TableView fx:id="SaleListTable" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="Pitemrow" prefWidth="75.0" text="ردیف" />
+                <TableColumn fx:id="Pitemserial" prefWidth="75.0" text="سریال کالا" />
+                  <TableColumn fx:id="Pitemname" prefWidth="262.39991760253906" text="نام کالا" />
+                  <TableColumn fx:id="Pitemvalue" prefWidth="121.5999755859375" text="مقدار یا تعداد" />
+                  <TableColumn fx:id="PitemRorW" prefWidth="123.199951171875" text="عمده یا خرده" />
+                  <TableColumn fx:id="PitemPrice" prefWidth="183.2000732421875" text="قیمت" />
+                  <TableColumn fx:id="PitemCost" prefWidth="156.00006103515625" text="قیمت مجموع" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </center>
+         <top>
+            <Label text="کالا های انتخاب شده :" BorderPane.alignment="CENTER_RIGHT">
+               <BorderPane.margin>
+                  <Insets bottom="3.0" right="15.0" top="2.0" />
+               </BorderPane.margin>
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font>
+            </Label>
+         </top>
+      </BorderPane>
+   </center>
+   <top>
+      <BorderPane prefHeight="310.0" prefWidth="995.0" BorderPane.alignment="CENTER">
+         <right>
+            <GridPane prefHeight="374.0" prefWidth="397.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-background-radius: 3px; -fx-border-radius: 3px;" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="AddToListButton" mnemonicParsing="false" onAction="#AddToList" prefHeight="35.0" prefWidth="130.0" text="افزودن به لیست" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="DeleteFromListButton" mnemonicParsing="false" onAction="#DeleteFromList" prefHeight="35.0" prefWidth="130.0" text="حذف از لیست" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="ShowInvoiseButton" mnemonicParsing="false" onAction="#ShowInvoise" prefHeight="35.0" prefWidth="130.0" text="مشاهده فاکتور" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BackButton" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="130.0" text="برگشت" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="ValueField" alignment="CENTER" maxWidth="140.0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="10.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <GridPane GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="تعداد / مقدار(kg) :" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <GridPane>
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <RadioButton fx:id="singleRadioButton" mnemonicParsing="false" selected="true" text="خرده" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="SaleMode" />
+                                 </toggleGroup>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton fx:id="MultipleRadioButton" mnemonicParsing="false" text="عمده" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="SaleMode" />
+                                 </toggleGroup>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <Label text="نوع فروش :" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="searchfield" maxWidth="140.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="140.0" promptText="جستجو" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+         </right>
+         <center>
+            <TableView fx:id="ItemsTable" nodeOrientation="RIGHT_TO_LEFT" prefHeight="374.0" prefWidth="619.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 3px; -fx-background-radius: 3px;" BorderPane.alignment="CENTER">
+              <columns>
+                  <TableColumn fx:id="itemrow" prefWidth="50.399961948394775" text="ردیف" />
+                <TableColumn fx:id="itemserial" prefWidth="61.600032806396484" text="سریال کالا" />
+                <TableColumn fx:id="itemname" prefWidth="118.39996337890625" text="نام کالا" />
+                  <TableColumn fx:id="itemgroup" prefWidth="100.0" text="دسته بندی" />
+                  <TableColumn fx:id="itemretailprice" prefWidth="89.60003662109375" text="قیمت" />
+                  <TableColumn fx:id="itemwholesaleprice" minWidth="0.0" prefWidth="84.79998779296875" text="قیمت عمده" />
+                  <TableColumn fx:id="iteminventory" prefWidth="87.20001220703125" text="موجودی" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </center>
+      </BorderPane>
+   </top>
+  
+</BorderPane>

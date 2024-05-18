@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="741.0" prefWidth="933.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CustomersManageController">
+   <left>
+      <Pane prefHeight="673.0" prefWidth="3.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="673.0" prefWidth="3.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <Pane prefHeight="5.0" prefWidth="934.0" BorderPane.alignment="CENTER" />
+   </bottom>
+    <top>
+      <GridPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="53.0" prefWidth="934.0" style="-fx-border-color: gray;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="DeleteCustomerButton" mnemonicParsing="false" onAction="#DeleteCustomer" prefHeight="35.0" prefWidth="150.0" text="حذف مشتری" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin> 
+                  <Insets bottom="10.0" top="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="EditCustomerButton" mnemonicParsing="false" onAction="#EditCustomer" prefHeight="35.0" prefWidth="150.0" text="ویرایش مشخصات مشتری" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="NewCustomerButton" alignment="CENTER" mnemonicParsing="false" onAction="#CreateNewCustomer" prefHeight="35.0" prefWidth="150.0" text="افزودن مشتری جدید" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="BackButton" alignment="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#Back" prefHeight="35.0" prefWidth="150.0" text="برگشت">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Button>
+            <TextField fx:id="searchfield" maxWidth="150.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="150.0" promptText="جستجو" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+         <BorderPane.margin>
+            <Insets top="1.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </top>
+   <center>
+      <TableView fx:id="CustomerTable" nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: gray;" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="row" maxWidth="1000.0" prefWidth="41.600099205970764" text="ردیف" />
+          <TableColumn fx:id="id" maxWidth="1000.0" prefWidth="60.0" text="کد مشتری" />
+            <TableColumn fx:id="name" maxWidth="1000.0" prefWidth="171.99999237060547" text="نام مشتری" />
+            <TableColumn fx:id="family" maxWidth="1000.0" prefWidth="106.4000244140625" text="نام خانوادگی" />
+            <TableColumn fx:id="mobile" maxWidth="1000.0" prefWidth="41.600099205970764" text="شماره تماس" />
+            <TableColumn fx:id="Point" maxWidth="1000.0" prefWidth="116.800048828125" text="امتیاز" />
+            <TableColumn fx:id="LastPurchaseDate" maxWidth="1000.0" prefWidth="96.80001831054688" text="تاریخ آخرین خرید" />
+        </columns>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+  
+</BorderPane>

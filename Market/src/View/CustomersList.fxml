@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="615.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CustomersListController">
+   <center>
+      <TableView fx:id="CustomersListTable" nodeOrientation="RIGHT_TO_LEFT" prefHeight="528.0" prefWidth="610.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="row" prefWidth="40.0" text="ردیف" />
+          <TableColumn fx:id="id" prefWidth="67.99994277954102" text="کد مشتری" />
+            <TableColumn fx:id="name" prefWidth="99.199951171875" text="نام" />
+            <TableColumn fx:id="family" prefWidth="183.99998474121094" text="نام خانوادگی" />
+            <TableColumn fx:id="mobile" prefWidth="138.4000244140625" text="شماره تماس" />
+            <TableColumn fx:id="point" prefWidth="77.5999755859375" text="امتیاز" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="2.0" right="2.0" top="5.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <bottom>
+      <GridPane prefHeight="74.0" prefWidth="615.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="BackButton" mnemonicParsing="false" onAction="#Back" prefHeight="32.0" prefWidth="120.0" text="برگشت" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="ChooseButton" mnemonicParsing="false" onAction="#ChooseCustomer" prefHeight="32.0" prefWidth="120.0" text="انتخاب" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </bottom>
+   <top>
+      <GridPane prefHeight="38.0" prefWidth="615.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" text="لیست مشتریان :" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="3.0" right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="searchfield" maxWidth="150.0" nodeOrientation="RIGHT_TO_LEFT" prefWidth="150.0" promptText="جستجو" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets top="5.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+   </top>
+</BorderPane>

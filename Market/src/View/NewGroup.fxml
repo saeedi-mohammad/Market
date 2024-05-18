@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="195.0" prefWidth="446.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.NewGroupController">
+   <right>
+      <Pane prefHeight="594.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+   </right>
+   <left>
+      <Pane prefHeight="426.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+   </left>
+   <bottom>
+      <Pane prefHeight="24.0" prefWidth="446.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <GridPane style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 20; -fx-background-radius: 20;" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="160.80001220703124" minHeight="10.0" prefHeight="65.60000610351562" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="75.99999618530275" minHeight="10.0" prefHeight="70.39999389648439" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane prefHeight="70.0" prefWidth="344.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.4" minWidth="10.0" prefWidth="258.4" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.60003662109375" minWidth="10.0" prefWidth="87.20000000000005" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="نام دسته بندی :" GridPane.columnIndex="1" />
+                  <TextField fx:id="GroupName" nodeOrientation="RIGHT_TO_LEFT" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets left="30.0" right="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+               </children>
+            </GridPane>
+            <GridPane prefHeight="40.0" prefWidth="346.0" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="backButton" mnemonicParsing="false" onAction="#back" prefWidth="75.0" text="برگشت" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Button fx:id="createButton" mnemonicParsing="false" onAction="#CreateGroup" prefHeight="26.0" prefWidth="75.0" text="ایجاد" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+               </children>
+            </GridPane>
+         </children>
+         <BorderPane.margin>
+            <Insets top="8.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <top>
+      <Label text="افزودن دسته بندی جدید:" BorderPane.alignment="CENTER_RIGHT">
+         <BorderPane.margin>
+            <Insets right="20.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="7.0" />
+         </padding>
+      </Label>
+   </top>
+</BorderPane>
